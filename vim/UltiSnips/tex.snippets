@@ -1,0 +1,110 @@
+
+snippet today
+`date +%m.%d.%y`
+endsnippet
+
+snippet startnotes
+% Date: `date +%m.%d.%y` ------------------ {{{
+\newpage
+\marginpar{Date: `date +%m.%d.%y` }
+$1
+% }}}
+endsnippet 
+
+snippet continuenotes
+\marginpar{Date: `date +%m.%d.%y` } % Continue notes 
+endsnippet 
+
+snippet matrix
+${1:A}_{m,n} = 
+	\begin{pmatrix}
+	${2:a}_{1,1} & $2_{1,2} & \cdots & $2_{1,n} \\\\
+	$2_{2,1}     & $2_{2,2} & \cdots & $2_{2,n} \\\\
+  \vdots             & \vdots   & \ddots & \vdots \\\\
+	$2_{m,1}     & $2_{m,2} & \cdots & $2_{m,n}
+	\end{pmatrix}$0
+endsnippet 
+
+snippet lim
+\lim_{${1:x} \to ${2:\infty}}$0
+endsnippet 
+
+snippet sum
+\sum_{$1}^{$2}$0
+endsnippet
+
+snippet int
+\int_{$1}^{$2}$0
+endsnippet
+
+snippet sqrt
+\sqrt{$1}
+endsnippet
+
+snippet frac
+\frac{$1}{$2}
+endsnippet
+
+snippet d
+\frac{d${1:y}}{d${2:x}}
+endsnippet 
+
+snippet pd 
+\frac{\partial ${1:y}}{\partial ${2:x}}
+endsnippet 
+
+snippet t 
+\text{ $1 }
+endsnippet
+
+snippet set
+\{ ${1:x} \text{ | } ${2:p(x)} \}
+endsnippet 
+
+snippet [
+\[ $1 \]
+endsnippet 
+
+snippet (
+\( $1 \)
+endsnippet
+
+snippet R 
+\mathbb{R}
+endsnippet 
+
+snippet pic
+\begin{flushleft}
+\includegraphics[scale=.3]{${1:FileName}}
+\end{flushleft}
+endsnippet 
+
+snippet easyplot
+\begin{tikzpicture}[scale=.6]   
+  \draw[step=1cm, teal, very thin] (0,0) grid (10,10); % Grid lines
+
+  \draw[thick, ->] (-1,0) -- (10,0) % + x axis line
+    node[anchor=north west] { \( x \) }; % x axis lable 
+
+  \draw[thick,->] (0,-1) -- (0,10) % + y axis line 
+    node[anchor=south east] { \( y \) }; % y axis lable
+
+  \draw[fill] (10,10) circle [radius=1pt] % dot in top right corner
+  	node[above right] (10,10) {(10,10)}; % lable (10,10) 
+\end{tikzpicture}
+\\\\[5mm]
+endsnippet 
+
+snippet figdotlable
+\draw[fill] (${1:x},${1:y}) circle [radius=2pt] 
+node[above right] { ${1:lable}};  
+endsnippet
+
+snippet figlable
+\node [${1:black}, above right] at (${1:x},${1:y}) { ${1:lable}};
+endsnippet
+
+snippet figdrawfunction
+\draw[very thick, red]
+(0,3) node[left] { \( P_0 \)} -- (3,3) to [out=0, in=-96] (6,10); 
+endsnippet 

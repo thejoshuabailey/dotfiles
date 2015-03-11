@@ -8,7 +8,17 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
 Plugin 'scrooloose/nerdtree' 
 
+Plugin 'SirVer/ultisnips'
+
+Plugin 'vim-scripts/TeX-9'
+
+Plugin 'ervandew/supertab'
+
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'godlygeek/tabular'
 call vundle#end() " required 
 filetype plugin indent on " required
