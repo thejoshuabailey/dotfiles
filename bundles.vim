@@ -20,5 +20,8 @@ Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'godlygeek/tabular'
+
+Plugin 'klen/python-mode'
+
 call vundle#end() " required 
 filetype plugin indent on " required
