@@ -112,3 +112,20 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# My settings 
+
+export EDITOR="vim"
+
+set -o vi
+
+
+# Lazy aliases
+alias l='ls -l'
+alias la='ls -Al'
+alias ..='cd ..'
+
+# Set terminal colors when launching screen
+alias tmux="TERM=screen-256color-bce tmux"
+
+
