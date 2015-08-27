@@ -128,4 +128,6 @@ alias ..='cd ..'
 # Set terminal colors when launching screen
 alias tmux="TERM=screen-256color-bce tmux"
 
+export TERM="xterm-256color"
+
 

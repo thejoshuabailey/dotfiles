@@ -8,11 +8,18 @@ set ruler
 set wildmenu 
 set tabstop=2
 
+if $COLORTERM == 'gnome-terminal'
+				set t_Co=256
+endif
+
+colorscheme molokai
+
 
 " TeX-9
 let g:tex_flavor = 'latex'
+let g:tex_fold_enabled = 1
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
-let g:tex_fast = ""
+"let g:tex_fast = ""
 
 " UltisnipsEdit to split your window
 let g:UltisnipsEditSplit="vertical"
@@ -92,7 +99,8 @@ augroup filetype_tex
 	" evince 
 	" View PDF macro; '%:r' is current file's root (base) name.
 	"autocmd FileType tex nnoremap <leader>v :!evince %:r.pdf &<cr><cr> 
-	autocmd FileType tex setlocal foldmethod=marker
+	"autocmd FileType tex setlocal foldmethod=syntax
+
 	
 	"Greek  
 	autocmd FileType tex inoremap <buffer> <localleader>a \alpha
